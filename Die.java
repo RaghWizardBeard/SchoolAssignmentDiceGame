@@ -21,6 +21,12 @@ public class Die
   {
       dieSides = sides;
   }
+   public Die()
+  {
+      dieSides = 6;
+      value = 1;
+  }
+  
   
   public int roll()
   {
@@ -39,8 +45,26 @@ public class Die
        return dieSides;
    }
 
-    public static void main(String[] args) {
-        // TODO code application logic here
+    public static void main(String[] args)     {
+
+        //test die constructors
+       Die die1 = new Die(20);
+       if(die1.getSides() != 20 && die1.getValue()!=1)
+       {
+           System.out.println("Error");
+       }
+
+       Die die2 = new Die();
+       if(die2.getSides() != 6 && die2.getValue()!=1)
+       {
+           System.out.println("Error");
+       }
+
+       Die die3 = new Die(6);
+       if(die3.getSides() != 6 && die3.getValue()!=1)
+       {
+           System.out.println("Error");
+       }
     }
     
 }
